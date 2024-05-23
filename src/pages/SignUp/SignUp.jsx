@@ -4,22 +4,39 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
+import userAxiosPublic from "../../hooks/userAxiosPublic";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 const SignUp = () => {
-
+    const axiosPublic = userAxiosPublic();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const onSubmit = data => {
-        console.log(data);
+     
         createUser(data.email, data.password)
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
-                        console.log('user profile info updated')
+                       //create user entry in the database
+                       const userInfo ={
+                        name: data.name,
+                        email: data.email
+                       }
+                       axiosPublic.post('/users', userInfo )
+                       .then(res=> {
+                        if(res.data.insertedId){
+                        console.log('user added to data base');
+
+                        }
+                       })
+                       .catch(error => {
+                        console.log(error);
+                       })
+                       
                         reset();
                         Swal.fire({
                             position: 'top-end',
@@ -87,11 +104,12 @@ const SignUp = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                            <div className="form-control mt-6">
+                            <div className="form-control mt-4">
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
                             </div>
                         </form>
-                        <p><small>Already have an account <Link to="/login">Login</Link></small></p>
+                        <p className="px-8 text-center"><small>Already have an account? <Link to="/login">Login</Link></small></p>
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div>
