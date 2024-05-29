@@ -46,18 +46,21 @@ const updateUserProfile = (name, photo) => {
             console.log('current user', currentUser);
             if(currentUser) {
                 // get token and store in client site
-                const userInfo = {email: currentUser}
+                // const userInfo = {email: currentUser}
+                const userInfo = currentUser;
                 axiosPublic.post('/jwt', userInfo)
                 .then(res => {
                     if(res.data.token){
                         localStorage.setItem('access-token', res.data.token )
+                        setLoading(false);
                     }
                 })
             }else {
                 //todo: remove token(if token is stored in client site)
-                localStorage.removeItem('access-token')
+                localStorage.removeItem('access-token');
+                setLoading(false);
             }
-            setLoading(false);
+           
         });
         return () => {
             return unsubscribe();
