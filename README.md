@@ -9,7 +9,13 @@ Menu Management: Add, update, and remove menu items.
 Staff Management: Manage staff roles and schedules.
 Dashboard: Overview of key metrics and restaurant performance.
 
-Clone the repository to explore and analyze the full code.  You have to replace your own credintial on .env.local
-```bash
-git clone https://github.com/ProgrammingHero1/bistro-boss-client-with-auth.git
-```
+**Technologies used: ** MongoDB, Express.js, React with Vite, and Node.js, stripe, firebase
+
+To install ProductPionner, follow these steps:
+
+Clone the repository: git colne https://github.com/smsaifurrahman/bistro-boss-client.git
+Navigate to the project directory: cd project-title
+Install dependencies: npm install
+Start the project: npm run dev
+Open your browser and navigate to http://localhost:5000.
+To configure the project, create a .env file in the root directory and add the following variables: API_KEY=your_api_key, VITE_STRIPE_PUBLISHABLE_KEY = your_key, VITE_IMAGE_HOSTING_KEY= Your_key
