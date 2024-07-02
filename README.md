@@ -1,5 +1,5 @@
 
-**Website Name : ** Bistro Boss Restaurant
+**Website Name : ** Bistro Boss
 
 **Live link:**  https://bistro-boss-2fab5.web.app/
 
@@ -16,17 +16,17 @@ Dashboard: Overview of key metrics and restaurant performance.
 
 **Technologies used: ** MongoDB, Express.js, React with Vite, and Node.js, stripe, firebase
 
-To install ProductPionner, follow these steps:
+**To install Bistro Boss, follow these steps:**
 
-1.Clone the repository: git colne https://github.com/smsaifurrahman/bistro-boss-client.git
+1. Clone the repository: git colne https://github.com/smsaifurrahman/bistro-boss-client.git
 
-2.Navigate to the project directory: cd project-title
+2. Navigate to the project directory: cd project-title
 
-3.Install dependencies: npm install
+3. Install dependencies: npm install
 
-4.Start the project: npm run dev
+4. Start the project: npm run dev
 
 5.Open your browser and navigate to http://localhost:5000.
 
-6.To configure the project, create a .env file in the root directory and add the following variables: API_KEY=your_api_key, VITE_STRIPE_PUBLISHABLE_KEY = your_key, VITE_IMAGE_HOSTING_KEY= Your_key
+6. To configure the project, create a .env file in the root directory and add the following variables: API_KEY=your_api_key, VITE_STRIPE_PUBLISHABLE_KEY = your_key, VITE_IMAGE_HOSTING_KEY= Your_key
 
