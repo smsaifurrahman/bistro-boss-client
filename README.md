@@ -6,13 +6,14 @@
 Bistro🍳Boss
 Bistro Boss is a comprehensive restaurant management website built using the MERN stack (MongoDB, Express.js, React with Vite, and Node.js). This application aims to streamline restaurant operations, providing an intuitive interface for managing reservations, orders, menus, and staff.
 
-Features
-User Authentication : Secure login and registration using JWT.
-Reservation Management: View, create, and manage customer reservations.
-Order Management: Track and manage orders in real-time.
-Menu Management: Add, update, and remove menu items.
-Staff Management: Manage staff roles and schedules.
-Dashboard: Overview of key metrics and restaurant performance.
+**Features**
+
+1. User Authentication : Secure login and registration using JWT.
+2. Reservation Management: View, create, and manage customer reservations.
+3. Order Management: Track and manage orders in real-time.
+4. Menu Management: Add, update, and remove menu items.
+5. Staff Management: Manage staff roles and schedules.
+6. Dashboard: Overview of key metrics and restaurant performance.
 
 **Technologies used: ** MongoDB, Express.js, React with Vite, and Node.js, stripe, firebase
 
