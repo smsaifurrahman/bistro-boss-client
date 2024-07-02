@@ -8,7 +8,6 @@ import Order from "../pages/Order/Order/Order";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
-import Secret from "../pages/Shared/Secret/Secret";
 import Dashboard from "../Layout/Dashboard/Dashboard";
 import Cart from "../pages/Dashboard/Cart/Cart";
 import AllUsers from "../pages/Dashboard/Cart/AllUsers/AllUsers";
@@ -47,10 +46,7 @@ import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
           path: 'signup',
           element: <SignUp></SignUp>
         },
-        {
-          path: 'secret',
-          element: <PrivateRoute><Secret></Secret></PrivateRoute>
-        }
+       
       ]
     },
     {
@@ -91,7 +87,7 @@ import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
         {
           path: 'updateItem/:id',
           element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
+          loader: ({params}) => fetch(`https://bistro-boss-server-kappa-orcin.vercel.app/menu/${params.id}`)
         },
         {
           path: 'users',

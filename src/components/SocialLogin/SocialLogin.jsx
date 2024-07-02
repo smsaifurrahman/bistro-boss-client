@@ -10,7 +10,7 @@ const SocialLogin = () => {
     const navigate = useNavigate();
    const { googleSignIn } = UseAuth();
    const handleGoogleSignIn = () => {
-    console.log('in here');
+
     googleSignIn()
     .then(result => {
         console.log(result.user);
